@@ -1,4 +1,133 @@
 Player:
+    HackyAI@SanderAI:
+		Name: Sander AI
+		MinimumExcessPower: 20
+		BuildingCommonNames:
+			ConstructionYard: fact
+			Refinery: proc
+			Power: powr,apwr
+			Barracks: barr,tent
+			VehiclesFactory: weap
+			Production: barr,tent,weap,afld,hpad
+			Silo: silo
+		UnitsCommonNames:
+			Mcv: mcv
+		BuildingLimits:
+			proc: 2
+			barr: 0
+			tent: 0
+			kenn: 0
+			dome: 1
+			weap: 3
+			hpad: 0
+			afld: 0
+			atek: 0
+			stek: 0
+			fix: 1
+		BuildingFractions:
+			proc: 30%
+			powr: 10%
+			apwr: 10%
+			barr: 0.1%
+			kenn: 0.5%
+			tent: 1%
+			weap: 10%
+			pbox: 7%
+			gun: 7%
+			tsla: 5%
+			ftur: 10%
+			agun: 5%
+			sam: 5%
+			atek: 1%
+			stek: 1%
+			fix: 0.1%
+			dome: 1%
+		UnitsToBuild:
+			e1: 0.1%
+			e2: 0.1%
+			e3: 0.1%
+			e4: 0.1%
+			dog: 0.1%
+			shok: 0.1%
+			harv: 0.1%
+			apc: 0.1%
+			jeep: 0.1%
+			arty: 0.1%
+			v2rl: 0.1%
+			ftrk: 0.1%
+			1tnk: 100%
+			2tnk: 0.1%
+			3tnk: 100%
+			4tnk: 0.1%
+			ttnk: 0.1%
+			stnk: 0.1%
+		UnitLimits:
+			e1: 0
+			e2: 0
+			e3: 0
+			e4: 0
+			shok: 0
+			apc: 0
+			jeep: 0
+			arty: 0
+			v2rl: 0
+			ftrk: 0
+			2tnk: 0
+			4tnk: 0
+			ttnk: 0
+			stnk: 0
+			dog: 0
+			harv: 3
+		SquadSize: 20
+		SupportPowerDecision@spyplane:
+			OrderName: SovietSpyPlane
+			MinimumAttractiveness: 1
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: None
+				CheckRadius: 5c0
+		SupportPowerDecision@paratroopers:
+			OrderName: SovietParatroopers
+			MinimumAttractiveness: 5
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: None
+				CheckRadius: 8c0
+			Consideration@2:
+				Against: Enemy
+				Types: Water
+				Attractiveness: -5
+				TargetMetric: None
+				CheckRadius: 8c0
+		SupportPowerDecision@parabombs:
+			OrderName: UkraineParabombs
+			MinimumAttractiveness: 1
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: None
+				CheckRadius: 5c0
+		SupportPowerDecision@nukepower:
+			OrderName: NukePowerInfoOrder
+			MinimumAttractiveness: 3000
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 5c0
+			Consideration@2:
+				Against: Ally
+				Types: Air, Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 7c0
+
 	HackyAI@RushAI:
 		Name: Rush AI
 		MinimumExcessPower: 40
