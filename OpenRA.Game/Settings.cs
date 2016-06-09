@@ -124,10 +124,10 @@ namespace OpenRA
 		public bool CursorDouble = false;
 
 		[Desc("Add a frame rate limiter. It is recommended to not disable this.")]
-		public bool CapFramerate = true;
+		public bool CapFramerate = false;
 
 		[Desc("At which frames per second to cap the framerate.")]
-		public int MaxFramerate = 60;
+		public int MaxFramerate = 300;
 
 		public int BatchSize = 8192;
 		public int SheetSize = 2048;

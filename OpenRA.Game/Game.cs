@@ -30,8 +30,8 @@ namespace OpenRA
 	public static class Game
 	{
 		public const int NetTickScale = 3; // 120 ms net tick for 40 ms local tick
-		public const int Timestep = 40;
-		public const int TimestepJankThreshold = 250; // Don't catch up for delays larger than 250ms
+		public const int Timestep = 1;
+		public const int TimestepJankThreshold = 25; // Don't catch up for delays larger than 250ms
 
 		public static ModData ModData;
 		public static Settings Settings;
@@ -650,8 +650,8 @@ namespace OpenRA
 				var logicInterval = worldRenderer != null && worldRenderer.World.Timestep != 0 ? worldRenderer.World.Timestep : Timestep;
 
 				// Ideal time between screen updates
-				var maxFramerate = Settings.Graphics.CapFramerate ? Settings.Graphics.MaxFramerate.Clamp(1, 1000) : 1000;
-				var renderInterval = 1000 / maxFramerate;
+				var maxFramerate = Settings.Graphics.CapFramerate ? Settings.Graphics.MaxFramerate.Clamp(1, 100000) : 100000;
+				var renderInterval = 100000 / maxFramerate;
 
 				var now = RunTime;
 

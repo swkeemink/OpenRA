@@ -218,19 +218,19 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 GameSpeeds:
 	slower:
 		Name: Slower
-		Timestep: 50
+		Timestep: 1
 		OrderLatency: 3
 	default:
 		Name: Normal
-		Timestep: 40
+		Timestep: 1
 		OrderLatency: 3
 	faster:
 		Name: Faster
-		Timestep: 30
+		Timestep: 1
 		OrderLatency: 4
 	fastest:
 		Name: Fastest
-		Timestep: 20
+		Timestep: 1
 		OrderLatency: 6
 
 ColorValidator:

@@ -211,7 +211,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 				int fps;
 				Exts.TryParseIntegerInvariant(frameLimitTextfield.Text, out fps);
-				ds.MaxFramerate = fps.Clamp(1, 1000);
+				ds.MaxFramerate = fps.Clamp(1, 100000);
 				frameLimitTextfield.Text = ds.MaxFramerate.ToString();
 			};
 
